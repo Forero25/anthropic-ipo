@@ -1,0 +1,15 @@
+# Supuestos del DCF. Los valores base salen del prospecto (S-1 / 424B4) y se citan con su página;
+# los rangos [mínimo, moda, máximo] son supuestos del análisis y se discuten en el artículo.
+# Mientras haya un campo en null, el DCF no corre: no hay valoración con cifras inventadas.
+anios: 10
+ventas_base: null          # ingresos de los últimos doce meses, USD millones (S-1, estados financieros)
+margen_base: null          # margen operativo de los últimos doce meses (S-1)
+tasa_impuesto: 0.21        # tasa federal de EE. UU.; tasa marginal de largo plazo
+caja_neta: null            # caja e inversiones menos deuda, después de la oferta, USD millones (424B4, capitalización)
+acciones_diluidas: null    # millones de acciones después de la oferta, todas las clases (424B4)
+crecimiento_terminal: 0.03
+roic_terminal: 0.15
+crecimiento_inicial: null  # [mín, moda, máx]
+margen_objetivo: null      # [mín, moda, máx]
+ventas_a_capital: null     # [mín, moda, máx]
+wacc: null                 # [mín, moda, máx]

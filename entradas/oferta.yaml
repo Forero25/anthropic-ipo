@@ -1,0 +1,10 @@
+# Cifras de la oferta según la prensa del 18 y 19 de noviembre de 2026.
+# No se publican tal cual: ingesta/edgar.py las lee del prospecto final (424B4) en EDGAR
+# y analisis/oferta.py se detiene si no coinciden. Lo que sale en resultados viene del prospecto.
+ticker: ANT
+fecha_precio: "2026-11-18"
+fecha_debut: "2026-11-19"
+precio_oferta: 83.0
+rango_indicativo: [70.0, 78.0]
+acciones_ofrecidas: 980000000
+fuente_prensa: "Fox Business, CNBC y AP, 18-19 nov 2026"
