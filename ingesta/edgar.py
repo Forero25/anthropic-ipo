@@ -45,14 +45,36 @@ def a_texto(contenido: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(sin_tags)).strip()
 
 
+def _num(x: str) -> float:
+    return float(x.replace(",", ""))
+
+
 def leer_portada(texto: str) -> dict:
-    """Precio y acciones de la portada del prospecto. Se toma la primera coincidencia: la portada va primero."""
-    precio = re.search(r"initial public offering price (?:is|of) \$\s?([\d,]+\.?\d*) per share", texto, re.I)
-    acciones = re.search(r"([\d,]{9,}) shares of (?:our )?Class A common stock", texto, re.I)
-    if not (precio and acciones):
-        sys.exit("No pude leer el precio o las acciones en la portada del 424B4.")
-    return {"precio_oferta": float(precio.group(1).replace(",", "")),
-            "acciones_ofrecidas": int(acciones.group(1).replace(",", ""))}
+    """Cifras de la portada del prospecto. Se toma la primera coincidencia de cada una: la portada va primero.
+    Se verifica que acciones nuevas + acciones de accionistas vendedores = total, y que total × precio = monto bruto."""
+    pat = {
+        "acciones_ofrecidas": r"Class A Common Stock ([\d,]+) Shares",
+        "acciones_primarias": r"We are selling ([\d,]+) shares of Class A common stock",
+        "acciones_secundarias": r"selling stockholders[^.]{0,80}?selling an additional ([\d,]+) shares",
+        "precio_oferta": r"initial public offering price(?: per share)? (?:is|of) \$\s?(\d[\d,]*\.?\d*)",
+        "descuento_por_accion": r"Underwriting discount(?: \(\d\))? \$ ?([\d.]+)",
+        "ingresos_anthropic_antes_gastos": r"Proceeds, before expenses, to Anthropic, PBC \$ ?[\d.]+ \$ ?([\d,]+)",
+        "opcion_sobreasignacion": r"option to purchase up to an additional ([\d,]+) shares",
+    }
+    out = {}
+    for k, p in pat.items():
+        m = re.search(p, texto, re.I)
+        if not m:
+            sys.exit(f"No pude leer {k} en la portada del 424B4.")
+        out[k] = _num(m.group(1))
+    for k in ("acciones_ofrecidas", "acciones_primarias", "acciones_secundarias", "opcion_sobreasignacion", "ingresos_anthropic_antes_gastos"):
+        out[k] = int(out[k])
+    if out["acciones_primarias"] + out["acciones_secundarias"] != out["acciones_ofrecidas"]:
+        sys.exit("Las acciones nuevas y las de accionistas vendedores no suman el total de la portada.")
+    bruto = re.search(r"\$ ?([\d,]{13,})", texto)
+    if bruto and abs(_num(bruto.group(1)) - out["acciones_ofrecidas"] * out["precio_oferta"]) > 1:
+        sys.exit("Total de acciones × precio no coincide con el monto bruto de la portada.")
+    return out
 
 
 def main():

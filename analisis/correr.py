@@ -17,8 +17,12 @@ def main():
     diarios = pd.read_parquet(DATOS / "diarios.parquet")
     r = riesgo.retornos(diarios)
     out = {"actualizado": dt.date.today().isoformat(), "ultimo_dato": str(pd.to_datetime(diarios["fecha"]).max().date()),
-           "oferta": {k: of[k] for k in ("precio_oferta", "acciones_ofrecidas", "rango_indicativo", "fecha_debut", "verificado")},
+           "oferta": {k: of[k] for k in ("precio_oferta", "acciones_ofrecidas", "acciones_primarias", "acciones_secundarias",
+                                          "descuento_por_accion", "ingresos_anthropic_antes_gastos", "opcion_sobreasignacion",
+                                          "rango_indicativo", "fecha_debut", "url", "verificado") if k in of},
            "debut": debut.resumen(diarios, of)}
+    if "descuento_por_accion" in of:
+        out["oferta"]["comision_bancos_pct"] = of["descuento_por_accion"] / of["precio_oferta"]
     ruta_i = DATOS / "intradia_1m.parquet"
     if ruta_i.exists():
         intr = pd.read_parquet(ruta_i)

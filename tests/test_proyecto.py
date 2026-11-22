@@ -21,9 +21,14 @@ def diarios_sinteticos():
 
 
 def test_portada_424b4():
-    texto = ("We are offering 980,000,000 shares of our Class A common stock. The initial public offering price is $83.00 per share. "
-             "Later: 147,000,000 shares of Class A common stock option.")
-    assert edgar.leer_portada(texto) == {"precio_oferta": 83.0, "acciones_ofrecidas": 980_000_000}
+    texto = ("Class A Common Stock 1,000,000 Shares Ejemplo, PBC. We are selling 900,000 shares of Class A common stock and the "
+             "selling stockholders identified in this prospectus are selling an additional 100,000 shares of Class A common stock. "
+             "The initial public offering price is $10.00 per share. Per Share Total Initial public offering price $ 10.00 $ 10,000,000,000 "
+             "Underwriting discount (1) $ 0.10 $ 100,000 Proceeds, before expenses, to Anthropic, PBC $ 9.90 $ 8,910,000 "
+             "the underwriters have the option to purchase up to an additional 150,000 shares of Class A common stock.")
+    r = edgar.leer_portada(texto.replace("10,000,000,000", "10,000,000"))
+    assert r["acciones_ofrecidas"] == 1_000_000 and r["acciones_primarias"] == 900_000 and r["acciones_secundarias"] == 100_000
+    assert r["precio_oferta"] == 10.0 and r["descuento_por_accion"] == 0.10 and r["opcion_sobreasignacion"] == 150_000
 
 
 def test_oferta_se_detiene_si_no_coincide():
