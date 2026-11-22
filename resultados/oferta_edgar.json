@@ -3,6 +3,11 @@
   "forma": "424B4",
   "fecha_presentacion": "2026-11-19",
   "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
+  "acciones_ofrecidas": 980000000,
+  "acciones_primarias": 956351354,
+  "acciones_secundarias": 23648646,
   "precio_oferta": 83.0,
-  "acciones_ofrecidas": 956351354
+  "descuento_por_accion": 0.56122,
+  "ingresos_anthropic_antes_gastos": 78840438875,
+  "opcion_sobreasignacion": 147000000
 }
