@@ -68,6 +68,10 @@ def main():
     texto = a_texto(get(s, url).text)
     CRUDO.mkdir(parents=True, exist_ok=True)
     (CRUDO / "424b4.txt").write_text(texto)
+    # Portada y resumen de la oferta (documento público de la SEC): se guardan para poder auditar la lectura
+    i = texto.lower().find("the offering")
+    (RAIZ / "resultados" / "portada_424b4.txt").parent.mkdir(exist_ok=True)
+    (RAIZ / "resultados" / "portada_424b4.txt").write_text(texto[:6000] + "\n\n[...]\n\n" + texto[max(i, 0):max(i, 0) + 6000])
     out = {"cik": cik, "forma": "424B4", "fecha_presentacion": f["filingDate"], "url": url, **leer_portada(texto)}
     SALIDA.parent.mkdir(exist_ok=True)
     SALIDA.write_text(json.dumps(out, indent=2, ensure_ascii=False))
