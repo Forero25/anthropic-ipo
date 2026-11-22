@@ -13,7 +13,8 @@ SALIDA = RAIZ / "resultados" / "oferta_edgar.json"
 
 
 def sesion():
-    ua = os.environ.get("SEC_USER_AGENT")
+    # Se limpian espacios, saltos de línea y comillas que suelen colarse al pegar el secreto
+    ua = " ".join(os.environ.get("SEC_USER_AGENT", "").split()).strip("\"' ")
     if not ua:
         sys.exit("Falta SEC_USER_AGENT (nombre y correo, como pide la SEC).")
     s = requests.Session()
