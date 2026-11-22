@@ -1,0 +1,275 @@
+{
+  "actualizado": "2026-11-22",
+  "ultimo_dato": "2026-11-20",
+  "oferta": {
+    "precio_oferta": 83.0,
+    "acciones_ofrecidas": 980000000,
+    "rango_indicativo": [
+      70.0,
+      78.0
+    ],
+    "fecha_debut": "2026-11-19",
+    "verificado": false
+  },
+  "debut": {
+    "precio_oferta": 83.0,
+    "apertura": 111.5,
+    "cierre": 97.16999816894531,
+    "maximo": 115.0999984741211,
+    "minimo": 92.72000122070312,
+    "volumen": 857312300,
+    "prima_apertura": 0.34337349397590367,
+    "retorno_primer_dia": 0.1707228695053653,
+    "retorno_mercado_dia": -0.021940579405949512,
+    "retorno_ajustado_mercado": 0.19266344891131482,
+    "cierre_vs_apertura": -0.12852019579421248,
+    "dinero_sobre_la_mesa_musd": 13886.598205566406,
+    "recaudo_oferta_musd": 81340.0
+  },
+  "recorrido": {
+    "primer_minuto": "11:48",
+    "minutos_con_operaciones": 252,
+    "hora_maximo": "11:49",
+    "hora_minimo": "13:18",
+    "vwap": 97.49008871065408,
+    "vwap_vs_oferta": 0.17457938205607326,
+    "share_minutos_bajo_apertura": 0.9920634920634921,
+    "serie_vs_oferta": [
+      {
+        "hora": "11:48",
+        "r": 0.33892
+      },
+      {
+        "hora": "11:53",
+        "r": 0.33699
+      },
+      {
+        "hora": "11:58",
+        "r": 0.28193
+      },
+      {
+        "hora": "12:03",
+        "r": 0.20771
+      },
+      {
+        "hora": "12:08",
+        "r": 0.23114
+      },
+      {
+        "hora": "12:13",
+        "r": 0.20102
+      },
+      {
+        "hora": "12:18",
+        "r": 0.14997
+      },
+      {
+        "hora": "12:23",
+        "r": 0.20325
+      },
+      {
+        "hora": "12:28",
+        "r": 0.21012
+      },
+      {
+        "hora": "12:33",
+        "r": 0.21723
+      },
+      {
+        "hora": "12:38",
+        "r": 0.20012
+      },
+      {
+        "hora": "12:43",
+        "r": 0.18048
+      },
+      {
+        "hora": "12:48",
+        "r": 0.19386
+      },
+      {
+        "hora": "12:53",
+        "r": 0.18687
+      },
+      {
+        "hora": "12:58",
+        "r": 0.17325
+      },
+      {
+        "hora": "13:03",
+        "r": 0.15283
+      },
+      {
+        "hora": "13:08",
+        "r": 0.14904
+      },
+      {
+        "hora": "13:13",
+        "r": 0.13614
+      },
+      {
+        "hora": "13:18",
+        "r": 0.11964
+      },
+      {
+        "hora": "13:23",
+        "r": 0.14048
+      },
+      {
+        "hora": "13:28",
+        "r": 0.1659
+      },
+      {
+        "hora": "13:33",
+        "r": 0.1756
+      },
+      {
+        "hora": "13:38",
+        "r": 0.17157
+      },
+      {
+        "hora": "13:43",
+        "r": 0.15922
+      },
+      {
+        "hora": "13:48",
+        "r": 0.15434
+      },
+      {
+        "hora": "13:53",
+        "r": 0.15024
+      },
+      {
+        "hora": "13:58",
+        "r": 0.15169
+      },
+      {
+        "hora": "14:03",
+        "r": 0.14612
+      },
+      {
+        "hora": "14:08",
+        "r": 0.12735
+      },
+      {
+        "hora": "14:13",
+        "r": 0.14506
+      },
+      {
+        "hora": "14:18",
+        "r": 0.13648
+      },
+      {
+        "hora": "14:23",
+        "r": 0.16398
+      },
+      {
+        "hora": "14:28",
+        "r": 0.16855
+      },
+      {
+        "hora": "14:33",
+        "r": 0.1609
+      },
+      {
+        "hora": "14:38",
+        "r": 0.16663
+      },
+      {
+        "hora": "14:43",
+        "r": 0.18578
+      },
+      {
+        "hora": "14:48",
+        "r": 0.19711
+      },
+      {
+        "hora": "14:53",
+        "r": 0.17988
+      },
+      {
+        "hora": "14:58",
+        "r": 0.16633
+      },
+      {
+        "hora": "15:03",
+        "r": 0.14928
+      },
+      {
+        "hora": "15:08",
+        "r": 0.14964
+      },
+      {
+        "hora": "15:13",
+        "r": 0.15428
+      },
+      {
+        "hora": "15:18",
+        "r": 0.15428
+      },
+      {
+        "hora": "15:23",
+        "r": 0.15
+      },
+      {
+        "hora": "15:28",
+        "r": 0.15032
+      },
+      {
+        "hora": "15:33",
+        "r": 0.14735
+      },
+      {
+        "hora": "15:38",
+        "r": 0.14687
+      },
+      {
+        "hora": "15:43",
+        "r": 0.14796
+      },
+      {
+        "hora": "15:48",
+        "r": 0.16506
+      },
+      {
+        "hora": "15:53",
+        "r": 0.16223
+      },
+      {
+        "hora": "15:58",
+        "r": 0.16928
+      }
+    ]
+  },
+  "vol_realizada": [
+    {
+      "fecha": "2026-11-19",
+      "vol_anualizada": 5.072816161819212,
+      "n_retornos": 51
+    },
+    {
+      "fecha": "2026-11-20",
+      "vol_anualizada": 1.276657404168978,
+      "n_retornos": 77
+    }
+  ],
+  "beta": {
+    "n": 1,
+    "nota": "menos de 20 sesiones: todavía no se estima"
+  },
+  "correlaciones": {
+    "n": 1,
+    "nota": "menos de 20 sesiones"
+  },
+  "garch": {
+    "n": 1,
+    "nota": "menos de 120 sesiones: un GARCH(1,1) no se estima con tan poca historia"
+  },
+  "factores": {
+    "n": 0,
+    "nota": "menos de 60 sesiones con factores publicados"
+  },
+  "dcf": {
+    "nota": "Supuestos sin llenar desde el prospecto: ['ventas_base', 'margen_base', 'caja_neta', 'acciones_diluidas', 'crecimiento_inicial', 'margen_objetivo', 'ventas_a_capital', 'wacc']"
+  }
+}
