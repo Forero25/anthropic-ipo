@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-24",
-  "ultimo_dato": "2026-11-23",
+  "actualizado": "2026-11-25",
+  "ultimo_dato": "2026-11-24",
   "oferta": {
     "precio_oferta": 83.0,
     "acciones_ofrecidas": 980000000,
@@ -263,18 +263,23 @@
       "fecha": "2026-11-23",
       "vol_anualizada": 1.298841933094528,
       "n_retornos": 77
+    },
+    {
+      "fecha": "2026-11-24",
+      "vol_anualizada": 0.9236258141064666,
+      "n_retornos": 77
     }
   ],
   "beta": {
-    "n": 2,
+    "n": 3,
     "nota": "menos de 20 sesiones: todavía no se estima"
   },
   "correlaciones": {
-    "n": 2,
+    "n": 3,
     "nota": "menos de 20 sesiones"
   },
   "garch": {
-    "n": 2,
+    "n": 3,
     "nota": "menos de 120 sesiones: un GARCH(1,1) no se estima con tan poca historia"
   },
   "factores": {
