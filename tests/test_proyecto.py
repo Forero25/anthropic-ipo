@@ -8,7 +8,7 @@ import pytest
 RAIZ = pathlib.Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(RAIZ / "analisis"), str(RAIZ / "ingesta")]
 import dcf, debut, oferta, riesgo  # noqa: E402
-import edgar, factores, precios  # noqa: E402
+import edgar, factores, precios, ritter  # noqa: E402
 
 OF = {"ticker": "ANT", "precio_oferta": 10.0, "acciones_ofrecidas": 1_000_000, "fecha_debut": "2026-11-19"}
 
@@ -132,3 +132,16 @@ def test_estados_lee_trimestres_y_capitalizacion(tmp_path):
     e = estados.leer(tmp_path)
     assert e["ventas_base"] == 220 and e["margen_base"] == pytest.approx(-2 / 220)
     assert e["caja_neta"] == 220 and e["acciones_diluidas"] == pytest.approx(1.500002)
+
+
+def test_ritter_tabla1_y_comparacion():
+    import historia
+    texto = ("Table 1: Mean First-day Returns and Money Left on the Table, 1980-2025 (julio)\n"
+             + "".join(f"    {a}   1,{a % 100:03d}   10.0%   12.0%   5.0%   ${a - 1979}.00 billion   ${2 * (a - 1979)}.00 billion\n" for a in range(1980, 2026))
+             + "Table 1a")
+    f = ritter.tabla1(texto)
+    assert len(f) == 46 and f[0]["n"] == 1080 and f[-1]["dinero_mesa_mmusd"] == 46.0
+    c = historia.comparar({"dinero_sobre_la_mesa_musd": 44_500, "retorno_primer_dia": 0.2},
+                          {"precio_oferta": 10.0, "acciones_ofrecidas": 9_000_000_000}, {"fuente": "x", "filas": f})
+    assert c["anios_con_mas_dinero_en_la_mesa_que_ant"] == [2024, 2025]
+    assert c["anios_con_mas_recaudo_que_ant"] == [2025] and c["percentil_ant_entre_medias_anuales"] == 1.0

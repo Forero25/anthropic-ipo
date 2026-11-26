@@ -6,7 +6,7 @@ import pandas as pd
 import yaml
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-import debut, dcf, estados, oferta, riesgo  # noqa: E402
+import debut, dcf, estados, historia, oferta, riesgo  # noqa: E402
 
 RAIZ = pathlib.Path(__file__).resolve().parents[1]
 DATOS, SALIDA = RAIZ / "datos", RAIZ / "resultados"
@@ -29,6 +29,9 @@ def main():
         out["recorrido"] = debut.recorrido(intr, of)
         vr = riesgo.vol_realizada(intr)
         out["vol_realizada"] = vr.to_dict("records")
+    ruta_r = SALIDA / "ritter_tabla1.json"
+    if ruta_r.exists():
+        out["historia"] = historia.comparar(out["debut"], of, json.loads(ruta_r.read_text()))
     out["beta"] = riesgo.beta(r)
     out["correlaciones"] = riesgo.correlaciones(r)
     out["garch"] = riesgo.garch(r)

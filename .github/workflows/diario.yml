@@ -31,8 +31,8 @@ jobs:
       - name: Prospecto final en EDGAR
         env: {SEC_USER_AGENT: "${{ secrets.SEC_USER_AGENT }}"}
         run: if [ -n "$SEC_USER_AGENT" ]; then python ingesta/edgar.py; else echo "falta el secreto SEC_USER_AGENT"; fi
-      - name: Estadísticas de Ritter (exploración del formato)
-        run: sudo apt-get install -y -qq poppler-utils >/dev/null && python ingesta/ritter.py --explorar || echo "Ritter no disponible"
+      - name: Estadísticas históricas de Ritter
+        run: sudo apt-get install -y -qq poppler-utils >/dev/null && python ingesta/ritter.py || echo "Ritter no disponible"
       - run: python analisis/correr.py
       - name: Guardar resultados
         if: always()
