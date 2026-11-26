@@ -36,10 +36,10 @@
   "recorrido": {
     "primer_minuto": "11:48",
     "minutos_con_operaciones": 252,
-    "hora_maximo": "11:49",
+    "hora_maximo": "11:50",
     "hora_minimo": "13:18",
-    "vwap": 97.49008871065408,
-    "vwap_vs_oferta": 0.17457938205607326,
+    "vwap": 97.39058975823546,
+    "vwap_vs_oferta": 0.17338059949681273,
     "share_minutos_bajo_apertura": 0.9920634920634921,
     "serie_vs_oferta": [
       {
@@ -64,7 +64,7 @@
       },
       {
         "hora": "12:13",
-        "r": 0.20102
+        "r": 0.20108
       },
       {
         "hora": "12:18",
@@ -251,17 +251,17 @@
   "vol_realizada": [
     {
       "fecha": "2026-11-19",
-      "vol_anualizada": 5.072816161819212,
+      "vol_anualizada": 5.071537612474615,
       "n_retornos": 51
     },
     {
       "fecha": "2026-11-20",
-      "vol_anualizada": 1.276657404168978,
+      "vol_anualizada": 1.2764206385213839,
       "n_retornos": 77
     },
     {
       "fecha": "2026-11-23",
-      "vol_anualizada": 1.302198764419848,
+      "vol_anualizada": 1.298841933094528,
       "n_retornos": 77
     },
     {
@@ -271,7 +271,7 @@
     },
     {
       "fecha": "2026-11-25",
-      "vol_anualizada": 1.1630064003240534,
+      "vol_anualizada": 1.1630590077286782,
       "n_retornos": 77
     }
   ],
@@ -291,7 +291,84 @@
     "n": 0,
     "nota": "menos de 60 sesiones con factores publicados"
   },
+  "estados": {
+    "ingresos_trimestrales": [
+      376.0,
+      787.0,
+      1382.0,
+      2040.0,
+      4731.0,
+      11555.0,
+      16956.0
+    ],
+    "operativo_trimestral": [
+      -935.0,
+      -1200.0,
+      -3089.0,
+      -2836.0,
+      -1667.0,
+      974.0,
+      -567.0
+    ],
+    "ventas_base": 35282.0,
+    "margen_base": -0.1160931919959186,
+    "ventas_ultimo_trimestre_anualizadas": 67824.0,
+    "caja": 232351.0,
+    "pagares_convertibles": 109742.0,
+    "caja_neta": 122609.0,
+    "acciones_clase_a": 7583103996,
+    "acciones_clase_n": 4789697318,
+    "acciones_diluidas": 12372.801316
+  },
   "dcf": {
-    "nota": "Supuestos sin llenar desde el prospecto: ['ventas_base', 'margen_base', 'caja_neta', 'acciones_diluidas', 'crecimiento_inicial', 'margen_objetivo', 'ventas_a_capital', 'wacc']"
+    "n": 50000,
+    "percentiles": {
+      "p5": 22.116453575191024,
+      "p25": 33.873007218686276,
+      "p50": 47.219217040290914,
+      "p75": 69.43025612064113,
+      "p95": 133.61996400472376
+    },
+    "media": 58.74877485246949,
+    "peso_valor_terminal_mediano": 1.0506706324918547,
+    "precio_referencia": 97.16999816894531,
+    "capitalizacion_al_precio_musd": 1202265.081220444,
+    "prob_valor_sobre_precio": 0.11614,
+    "crecimiento_implicito": 2.578090776092362,
+    "tornado": {
+      "base": 44.89710088932577,
+      "supuestos": [
+        {
+          "supuesto": "persistencia_crecimiento",
+          "en_minimo": 30.05193513423968,
+          "en_maximo": 155.17497233514254,
+          "rango": 125.12303720090286
+        },
+        {
+          "supuesto": "crecimiento_inicial",
+          "en_minimo": 25.927090355399667,
+          "en_maximo": 98.80532808572393,
+          "rango": 72.87823773032426
+        },
+        {
+          "supuesto": "margen_objetivo",
+          "en_minimo": 17.17005424274824,
+          "en_maximo": 63.28710809224887,
+          "rango": 46.117053849500635
+        },
+        {
+          "supuesto": "wacc",
+          "en_minimo": 70.7667595881731,
+          "en_maximo": 31.25365225094185,
+          "rango": 39.51310733723125
+        },
+        {
+          "supuesto": "ventas_a_capital",
+          "en_minimo": 32.232865877689,
+          "en_maximo": 50.68646546607401,
+          "rango": 18.45359958838501
+        }
+      ]
+    }
   }
 }
