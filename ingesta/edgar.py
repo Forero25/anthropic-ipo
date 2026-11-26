@@ -77,6 +77,28 @@ def leer_portada(texto: str) -> dict:
     return out
 
 
+SECCIONES = {
+    "resumen_financiero": r"summary consolidated financial (?:and other )?data",
+    "capitalizacion": r"capitalization the following table sets forth",
+    "acciones_en_circulacion": r"shares of (?:our )?class a common stock to be outstanding after this offering",
+    "resultados_operacion": r"results of operations the following table",
+    "metricas_clave": r"key (?:business|operating) metrics",
+}
+
+
+def guardar_extractos(texto: str, largo=15000):
+    """Guarda las secciones del prospecto con las cifras que necesita la valoración (documento público de la SEC),
+    para que cada supuesto del DCF se pueda citar y verificar contra el texto."""
+    carpeta = RAIZ / "resultados" / "extractos_424b4"
+    carpeta.mkdir(parents=True, exist_ok=True)
+    for nombre, patron in SECCIONES.items():
+        coincidencias = [m.start() for m in re.finditer(patron, texto, re.I)]
+        # la primera aparición suele ser el índice; se toma la segunda si existe
+        if coincidencias:
+            i = coincidencias[1] if len(coincidencias) > 1 else coincidencias[0]
+            (carpeta / f"{nombre}.txt").write_text(texto[i:i + largo])
+
+
 def main():
     s = sesion()
     cik = buscar_cik(s)
@@ -94,6 +116,7 @@ def main():
     i = texto.lower().find("the offering")
     (RAIZ / "resultados" / "portada_424b4.txt").parent.mkdir(exist_ok=True)
     (RAIZ / "resultados" / "portada_424b4.txt").write_text(texto[:6000] + "\n\n[...]\n\n" + texto[max(i, 0):max(i, 0) + 6000])
+    guardar_extractos(texto)
     out = {"cik": cik, "forma": "424B4", "fecha_presentacion": f["filingDate"], "url": url, **leer_portada(texto)}
     SALIDA.parent.mkdir(exist_ok=True)
     SALIDA.write_text(json.dumps(out, indent=2, ensure_ascii=False))
