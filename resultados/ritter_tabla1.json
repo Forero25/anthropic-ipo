@@ -1,0 +1,420 @@
+{
+ "fuente": "Jay R. Ritter, Initial Public Offerings: Updated Statistics, Table 1",
+ "url": "https://site.warrington.ufl.edu/ritter/files/IPO-Statistics.pdf",
+ "filas": [
+  {
+   "anio": 1980,
+   "n": 71,
+   "retorno_medio": 0.14300000000000002,
+   "retorno_ponderado": 0.2,
+   "retorno_mediano": 0.069,
+   "dinero_mesa_mmusd": 0.18,
+   "recaudo_mmusd": 0.91
+  },
+  {
+   "anio": 1981,
+   "n": 192,
+   "retorno_medio": 0.059000000000000004,
+   "retorno_ponderado": 0.057,
+   "retorno_mediano": 0.003,
+   "dinero_mesa_mmusd": 0.13,
+   "recaudo_mmusd": 2.31
+  },
+  {
+   "anio": 1982,
+   "n": 77,
+   "retorno_medio": 0.11,
+   "retorno_ponderado": 0.133,
+   "retorno_mediano": 0.037000000000000005,
+   "dinero_mesa_mmusd": 0.13,
+   "recaudo_mmusd": 1.0
+  },
+  {
+   "anio": 1983,
+   "n": 451,
+   "retorno_medio": 0.099,
+   "retorno_ponderado": 0.094,
+   "retorno_mediano": 0.025,
+   "dinero_mesa_mmusd": 0.84,
+   "recaudo_mmusd": 8.89
+  },
+  {
+   "anio": 1984,
+   "n": 171,
+   "retorno_medio": 0.037000000000000005,
+   "retorno_ponderado": 0.025,
+   "retorno_mediano": 0.0,
+   "dinero_mesa_mmusd": 0.05,
+   "recaudo_mmusd": 2.02
+  },
+  {
+   "anio": 1985,
+   "n": 186,
+   "retorno_medio": 0.064,
+   "retorno_ponderado": 0.055999999999999994,
+   "retorno_mediano": 0.027999999999999997,
+   "dinero_mesa_mmusd": 0.23,
+   "recaudo_mmusd": 4.09
+  },
+  {
+   "anio": 1986,
+   "n": 393,
+   "retorno_medio": 0.061,
+   "retorno_ponderado": 0.051,
+   "retorno_mediano": 0.011000000000000001,
+   "dinero_mesa_mmusd": 0.68,
+   "recaudo_mmusd": 13.4
+  },
+  {
+   "anio": 1987,
+   "n": 285,
+   "retorno_medio": 0.055999999999999994,
+   "retorno_ponderado": 0.057,
+   "retorno_mediano": 0.013000000000000001,
+   "dinero_mesa_mmusd": 0.66,
+   "recaudo_mmusd": 11.68
+  },
+  {
+   "anio": 1988,
+   "n": 105,
+   "retorno_medio": 0.055,
+   "retorno_ponderado": 0.034,
+   "retorno_mediano": 0.023,
+   "dinero_mesa_mmusd": 0.13,
+   "recaudo_mmusd": 3.88
+  },
+  {
+   "anio": 1989,
+   "n": 116,
+   "retorno_medio": 0.08,
+   "retorno_ponderado": 0.047,
+   "retorno_mediano": 0.04,
+   "dinero_mesa_mmusd": 0.27,
+   "recaudo_mmusd": 5.81
+  },
+  {
+   "anio": 1990,
+   "n": 110,
+   "retorno_medio": 0.10800000000000001,
+   "retorno_ponderado": 0.081,
+   "retorno_mediano": 0.055999999999999994,
+   "dinero_mesa_mmusd": 0.34,
+   "recaudo_mmusd": 4.24
+  },
+  {
+   "anio": 1991,
+   "n": 286,
+   "retorno_medio": 0.11900000000000001,
+   "retorno_ponderado": 0.09699999999999999,
+   "retorno_mediano": 0.075,
+   "dinero_mesa_mmusd": 1.5,
+   "recaudo_mmusd": 15.39
+  },
+  {
+   "anio": 1992,
+   "n": 412,
+   "retorno_medio": 0.10300000000000001,
+   "retorno_ponderado": 0.08,
+   "retorno_mediano": 0.044000000000000004,
+   "dinero_mesa_mmusd": 1.82,
+   "recaudo_mmusd": 22.69
+  },
+  {
+   "anio": 1993,
+   "n": 510,
+   "retorno_medio": 0.127,
+   "retorno_ponderado": 0.11199999999999999,
+   "retorno_mediano": 0.063,
+   "dinero_mesa_mmusd": 3.52,
+   "recaudo_mmusd": 31.44
+  },
+  {
+   "anio": 1994,
+   "n": 402,
+   "retorno_medio": 0.096,
+   "retorno_ponderado": 0.083,
+   "retorno_mediano": 0.042,
+   "dinero_mesa_mmusd": 1.43,
+   "recaudo_mmusd": 17.18
+  },
+  {
+   "anio": 1995,
+   "n": 462,
+   "retorno_medio": 0.214,
+   "retorno_ponderado": 0.175,
+   "retorno_mediano": 0.132,
+   "dinero_mesa_mmusd": 4.9,
+   "recaudo_mmusd": 27.93
+  },
+  {
+   "anio": 1996,
+   "n": 677,
+   "retorno_medio": 0.172,
+   "retorno_ponderado": 0.161,
+   "retorno_mediano": 0.1,
+   "dinero_mesa_mmusd": 6.76,
+   "recaudo_mmusd": 42.05
+  },
+  {
+   "anio": 1997,
+   "n": 474,
+   "retorno_medio": 0.14,
+   "retorno_ponderado": 0.14400000000000002,
+   "retorno_mediano": 0.094,
+   "dinero_mesa_mmusd": 4.56,
+   "recaudo_mmusd": 31.76
+  },
+  {
+   "anio": 1998,
+   "n": 283,
+   "retorno_medio": 0.21899999999999997,
+   "retorno_ponderado": 0.156,
+   "retorno_mediano": 0.08900000000000001,
+   "dinero_mesa_mmusd": 5.25,
+   "recaudo_mmusd": 33.66
+  },
+  {
+   "anio": 1999,
+   "n": 476,
+   "retorno_medio": 0.7120000000000001,
+   "retorno_ponderado": 0.574,
+   "retorno_mediano": 0.375,
+   "dinero_mesa_mmusd": 37.11,
+   "recaudo_mmusd": 64.67
+  },
+  {
+   "anio": 2000,
+   "n": 380,
+   "retorno_medio": 0.563,
+   "retorno_ponderado": 0.45799999999999996,
+   "retorno_mediano": 0.27899999999999997,
+   "dinero_mesa_mmusd": 29.68,
+   "recaudo_mmusd": 64.8
+  },
+  {
+   "anio": 2001,
+   "n": 80,
+   "retorno_medio": 0.14,
+   "retorno_ponderado": 0.084,
+   "retorno_mediano": 0.102,
+   "dinero_mesa_mmusd": 2.97,
+   "recaudo_mmusd": 35.29
+  },
+  {
+   "anio": 2002,
+   "n": 66,
+   "retorno_medio": 0.091,
+   "retorno_ponderado": 0.051,
+   "retorno_mediano": 0.08199999999999999,
+   "dinero_mesa_mmusd": 1.13,
+   "recaudo_mmusd": 22.03
+  },
+  {
+   "anio": 2003,
+   "n": 63,
+   "retorno_medio": 0.11699999999999999,
+   "retorno_ponderado": 0.10400000000000001,
+   "retorno_mediano": 0.087,
+   "dinero_mesa_mmusd": 1.0,
+   "recaudo_mmusd": 9.54
+  },
+  {
+   "anio": 2004,
+   "n": 173,
+   "retorno_medio": 0.12300000000000001,
+   "retorno_ponderado": 0.124,
+   "retorno_mediano": 0.071,
+   "dinero_mesa_mmusd": 3.86,
+   "recaudo_mmusd": 31.19
+  },
+  {
+   "anio": 2005,
+   "n": 159,
+   "retorno_medio": 0.10300000000000001,
+   "retorno_ponderado": 0.09300000000000001,
+   "retorno_mediano": 0.057999999999999996,
+   "dinero_mesa_mmusd": 2.64,
+   "recaudo_mmusd": 28.23
+  },
+  {
+   "anio": 2006,
+   "n": 157,
+   "retorno_medio": 0.121,
+   "retorno_ponderado": 0.13,
+   "retorno_mediano": 0.055999999999999994,
+   "dinero_mesa_mmusd": 3.95,
+   "recaudo_mmusd": 30.48
+  },
+  {
+   "anio": 2007,
+   "n": 159,
+   "retorno_medio": 0.14,
+   "retorno_ponderado": 0.139,
+   "retorno_mediano": 0.068,
+   "dinero_mesa_mmusd": 4.95,
+   "recaudo_mmusd": 35.66
+  },
+  {
+   "anio": 2008,
+   "n": 21,
+   "retorno_medio": 0.057,
+   "retorno_ponderado": 0.247,
+   "retorno_mediano": -0.017,
+   "dinero_mesa_mmusd": 5.63,
+   "recaudo_mmusd": 22.76
+  },
+  {
+   "anio": 2009,
+   "n": 41,
+   "retorno_medio": 0.098,
+   "retorno_ponderado": 0.111,
+   "retorno_mediano": 0.057,
+   "dinero_mesa_mmusd": 1.46,
+   "recaudo_mmusd": 13.17
+  },
+  {
+   "anio": 2010,
+   "n": 91,
+   "retorno_medio": 0.094,
+   "retorno_ponderado": 0.062,
+   "retorno_mediano": 0.031,
+   "dinero_mesa_mmusd": 1.84,
+   "recaudo_mmusd": 29.82
+  },
+  {
+   "anio": 2011,
+   "n": 81,
+   "retorno_medio": 0.139,
+   "retorno_ponderado": 0.13,
+   "retorno_mediano": 0.085,
+   "dinero_mesa_mmusd": 3.51,
+   "recaudo_mmusd": 26.97
+  },
+  {
+   "anio": 2012,
+   "n": 93,
+   "retorno_medio": 0.177,
+   "retorno_ponderado": 0.08900000000000001,
+   "retorno_mediano": 0.111,
+   "dinero_mesa_mmusd": 2.75,
+   "recaudo_mmusd": 31.11
+  },
+  {
+   "anio": 2013,
+   "n": 158,
+   "retorno_medio": 0.209,
+   "retorno_ponderado": 0.19,
+   "retorno_mediano": 0.13,
+   "dinero_mesa_mmusd": 7.89,
+   "recaudo_mmusd": 41.56
+  },
+  {
+   "anio": 2014,
+   "n": 206,
+   "retorno_medio": 0.155,
+   "retorno_ponderado": 0.128,
+   "retorno_mediano": 0.057999999999999996,
+   "dinero_mesa_mmusd": 5.4,
+   "recaudo_mmusd": 42.2
+  },
+  {
+   "anio": 2015,
+   "n": 118,
+   "retorno_medio": 0.192,
+   "retorno_ponderado": 0.18899999999999997,
+   "retorno_mediano": 0.10300000000000001,
+   "dinero_mesa_mmusd": 4.16,
+   "recaudo_mmusd": 22.0
+  },
+  {
+   "anio": 2016,
+   "n": 75,
+   "retorno_medio": 0.145,
+   "retorno_ponderado": 0.142,
+   "retorno_mediano": 0.05,
+   "dinero_mesa_mmusd": 1.77,
+   "recaudo_mmusd": 12.52
+  },
+  {
+   "anio": 2017,
+   "n": 107,
+   "retorno_medio": 0.13,
+   "retorno_ponderado": 0.16,
+   "retorno_mediano": 0.09,
+   "dinero_mesa_mmusd": 3.7,
+   "recaudo_mmusd": 23.03
+  },
+  {
+   "anio": 2018,
+   "n": 134,
+   "retorno_medio": 0.185,
+   "retorno_ponderado": 0.19,
+   "retorno_mediano": 0.11599999999999999,
+   "dinero_mesa_mmusd": 6.36,
+   "recaudo_mmusd": 33.47
+  },
+  {
+   "anio": 2019,
+   "n": 113,
+   "retorno_medio": 0.235,
+   "retorno_ponderado": 0.17600000000000002,
+   "retorno_mediano": 0.179,
+   "dinero_mesa_mmusd": 6.95,
+   "recaudo_mmusd": 39.28
+  },
+  {
+   "anio": 2020,
+   "n": 165,
+   "retorno_medio": 0.41600000000000004,
+   "retorno_ponderado": 0.479,
+   "retorno_mediano": 0.262,
+   "dinero_mesa_mmusd": 29.66,
+   "recaudo_mmusd": 61.86
+  },
+  {
+   "anio": 2021,
+   "n": 311,
+   "retorno_medio": 0.321,
+   "retorno_ponderado": 0.24,
+   "retorno_mediano": 0.17,
+   "dinero_mesa_mmusd": 28.65,
+   "recaudo_mmusd": 119.36
+  },
+  {
+   "anio": 2022,
+   "n": 38,
+   "retorno_medio": 0.489,
+   "retorno_ponderado": 0.142,
+   "retorno_mediano": 0.09300000000000001,
+   "dinero_mesa_mmusd": 0.99,
+   "recaudo_mmusd": 6.99
+  },
+  {
+   "anio": 2023,
+   "n": 54,
+   "retorno_medio": 0.11900000000000001,
+   "retorno_ponderado": 0.161,
+   "retorno_mediano": -0.005,
+   "dinero_mesa_mmusd": 1.92,
+   "recaudo_mmusd": 11.92
+  },
+  {
+   "anio": 2024,
+   "n": 73,
+   "retorno_medio": 0.153,
+   "retorno_ponderado": 0.18100000000000002,
+   "retorno_mediano": 0.07200000000000001,
+   "dinero_mesa_mmusd": 3.79,
+   "recaudo_mmusd": 20.9
+  },
+  {
+   "anio": 2025,
+   "n": 90,
+   "retorno_medio": 0.293,
+   "retorno_ponderado": 0.336,
+   "retorno_mediano": 0.13699999999999998,
+   "dinero_mesa_mmusd": 13.11,
+   "recaudo_mmusd": 38.97
+  }
+ ]
+}

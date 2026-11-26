@@ -275,6 +275,322 @@
       "n_retornos": 77
     }
   ],
+  "historia": {
+    "fuente": "Jay R. Ritter, Initial Public Offerings: Updated Statistics, Table 1",
+    "anios": [
+      1980,
+      2025
+    ],
+    "dinero_mesa_ant_mmusd": 13.886598205566406,
+    "recaudo_ant_mmusd": 81.34,
+    "anios_con_mas_dinero_en_la_mesa_que_ant": [
+      1999,
+      2000,
+      2020,
+      2021
+    ],
+    "anios_con_mas_recaudo_que_ant": [
+      2021
+    ],
+    "ultimo_anio": {
+      "anio": 2025,
+      "n": 90,
+      "retorno_medio": 0.293,
+      "retorno_ponderado": 0.336,
+      "retorno_mediano": 0.13699999999999998,
+      "dinero_mesa_mmusd": 13.11,
+      "recaudo_mmusd": 38.97
+    },
+    "ant_vs_ultimo_anio": {
+      "mesa": 1.0592370866183376,
+      "recaudo": 2.0872465999486787
+    },
+    "participacion_en_total_historico": {
+      "recaudo": 0.0677771204306272,
+      "mesa": 0.05549977301293476
+    },
+    "retorno_ant": 0.1707228695053653,
+    "retorno_medio_historico": 0.19002322097378274,
+    "percentil_ant_entre_medias_anuales": 0.6956521739130435,
+    "serie": [
+      {
+        "anio": 1980,
+        "retorno_medio": 0.14300000000000002,
+        "dinero_mesa_mmusd": 0.18,
+        "recaudo_mmusd": 0.91
+      },
+      {
+        "anio": 1981,
+        "retorno_medio": 0.059000000000000004,
+        "dinero_mesa_mmusd": 0.13,
+        "recaudo_mmusd": 2.31
+      },
+      {
+        "anio": 1982,
+        "retorno_medio": 0.11,
+        "dinero_mesa_mmusd": 0.13,
+        "recaudo_mmusd": 1.0
+      },
+      {
+        "anio": 1983,
+        "retorno_medio": 0.099,
+        "dinero_mesa_mmusd": 0.84,
+        "recaudo_mmusd": 8.89
+      },
+      {
+        "anio": 1984,
+        "retorno_medio": 0.037000000000000005,
+        "dinero_mesa_mmusd": 0.05,
+        "recaudo_mmusd": 2.02
+      },
+      {
+        "anio": 1985,
+        "retorno_medio": 0.064,
+        "dinero_mesa_mmusd": 0.23,
+        "recaudo_mmusd": 4.09
+      },
+      {
+        "anio": 1986,
+        "retorno_medio": 0.061,
+        "dinero_mesa_mmusd": 0.68,
+        "recaudo_mmusd": 13.4
+      },
+      {
+        "anio": 1987,
+        "retorno_medio": 0.055999999999999994,
+        "dinero_mesa_mmusd": 0.66,
+        "recaudo_mmusd": 11.68
+      },
+      {
+        "anio": 1988,
+        "retorno_medio": 0.055,
+        "dinero_mesa_mmusd": 0.13,
+        "recaudo_mmusd": 3.88
+      },
+      {
+        "anio": 1989,
+        "retorno_medio": 0.08,
+        "dinero_mesa_mmusd": 0.27,
+        "recaudo_mmusd": 5.81
+      },
+      {
+        "anio": 1990,
+        "retorno_medio": 0.10800000000000001,
+        "dinero_mesa_mmusd": 0.34,
+        "recaudo_mmusd": 4.24
+      },
+      {
+        "anio": 1991,
+        "retorno_medio": 0.11900000000000001,
+        "dinero_mesa_mmusd": 1.5,
+        "recaudo_mmusd": 15.39
+      },
+      {
+        "anio": 1992,
+        "retorno_medio": 0.10300000000000001,
+        "dinero_mesa_mmusd": 1.82,
+        "recaudo_mmusd": 22.69
+      },
+      {
+        "anio": 1993,
+        "retorno_medio": 0.127,
+        "dinero_mesa_mmusd": 3.52,
+        "recaudo_mmusd": 31.44
+      },
+      {
+        "anio": 1994,
+        "retorno_medio": 0.096,
+        "dinero_mesa_mmusd": 1.43,
+        "recaudo_mmusd": 17.18
+      },
+      {
+        "anio": 1995,
+        "retorno_medio": 0.214,
+        "dinero_mesa_mmusd": 4.9,
+        "recaudo_mmusd": 27.93
+      },
+      {
+        "anio": 1996,
+        "retorno_medio": 0.172,
+        "dinero_mesa_mmusd": 6.76,
+        "recaudo_mmusd": 42.05
+      },
+      {
+        "anio": 1997,
+        "retorno_medio": 0.14,
+        "dinero_mesa_mmusd": 4.56,
+        "recaudo_mmusd": 31.76
+      },
+      {
+        "anio": 1998,
+        "retorno_medio": 0.21899999999999997,
+        "dinero_mesa_mmusd": 5.25,
+        "recaudo_mmusd": 33.66
+      },
+      {
+        "anio": 1999,
+        "retorno_medio": 0.7120000000000001,
+        "dinero_mesa_mmusd": 37.11,
+        "recaudo_mmusd": 64.67
+      },
+      {
+        "anio": 2000,
+        "retorno_medio": 0.563,
+        "dinero_mesa_mmusd": 29.68,
+        "recaudo_mmusd": 64.8
+      },
+      {
+        "anio": 2001,
+        "retorno_medio": 0.14,
+        "dinero_mesa_mmusd": 2.97,
+        "recaudo_mmusd": 35.29
+      },
+      {
+        "anio": 2002,
+        "retorno_medio": 0.091,
+        "dinero_mesa_mmusd": 1.13,
+        "recaudo_mmusd": 22.03
+      },
+      {
+        "anio": 2003,
+        "retorno_medio": 0.11699999999999999,
+        "dinero_mesa_mmusd": 1.0,
+        "recaudo_mmusd": 9.54
+      },
+      {
+        "anio": 2004,
+        "retorno_medio": 0.12300000000000001,
+        "dinero_mesa_mmusd": 3.86,
+        "recaudo_mmusd": 31.19
+      },
+      {
+        "anio": 2005,
+        "retorno_medio": 0.10300000000000001,
+        "dinero_mesa_mmusd": 2.64,
+        "recaudo_mmusd": 28.23
+      },
+      {
+        "anio": 2006,
+        "retorno_medio": 0.121,
+        "dinero_mesa_mmusd": 3.95,
+        "recaudo_mmusd": 30.48
+      },
+      {
+        "anio": 2007,
+        "retorno_medio": 0.14,
+        "dinero_mesa_mmusd": 4.95,
+        "recaudo_mmusd": 35.66
+      },
+      {
+        "anio": 2008,
+        "retorno_medio": 0.057,
+        "dinero_mesa_mmusd": 5.63,
+        "recaudo_mmusd": 22.76
+      },
+      {
+        "anio": 2009,
+        "retorno_medio": 0.098,
+        "dinero_mesa_mmusd": 1.46,
+        "recaudo_mmusd": 13.17
+      },
+      {
+        "anio": 2010,
+        "retorno_medio": 0.094,
+        "dinero_mesa_mmusd": 1.84,
+        "recaudo_mmusd": 29.82
+      },
+      {
+        "anio": 2011,
+        "retorno_medio": 0.139,
+        "dinero_mesa_mmusd": 3.51,
+        "recaudo_mmusd": 26.97
+      },
+      {
+        "anio": 2012,
+        "retorno_medio": 0.177,
+        "dinero_mesa_mmusd": 2.75,
+        "recaudo_mmusd": 31.11
+      },
+      {
+        "anio": 2013,
+        "retorno_medio": 0.209,
+        "dinero_mesa_mmusd": 7.89,
+        "recaudo_mmusd": 41.56
+      },
+      {
+        "anio": 2014,
+        "retorno_medio": 0.155,
+        "dinero_mesa_mmusd": 5.4,
+        "recaudo_mmusd": 42.2
+      },
+      {
+        "anio": 2015,
+        "retorno_medio": 0.192,
+        "dinero_mesa_mmusd": 4.16,
+        "recaudo_mmusd": 22.0
+      },
+      {
+        "anio": 2016,
+        "retorno_medio": 0.145,
+        "dinero_mesa_mmusd": 1.77,
+        "recaudo_mmusd": 12.52
+      },
+      {
+        "anio": 2017,
+        "retorno_medio": 0.13,
+        "dinero_mesa_mmusd": 3.7,
+        "recaudo_mmusd": 23.03
+      },
+      {
+        "anio": 2018,
+        "retorno_medio": 0.185,
+        "dinero_mesa_mmusd": 6.36,
+        "recaudo_mmusd": 33.47
+      },
+      {
+        "anio": 2019,
+        "retorno_medio": 0.235,
+        "dinero_mesa_mmusd": 6.95,
+        "recaudo_mmusd": 39.28
+      },
+      {
+        "anio": 2020,
+        "retorno_medio": 0.41600000000000004,
+        "dinero_mesa_mmusd": 29.66,
+        "recaudo_mmusd": 61.86
+      },
+      {
+        "anio": 2021,
+        "retorno_medio": 0.321,
+        "dinero_mesa_mmusd": 28.65,
+        "recaudo_mmusd": 119.36
+      },
+      {
+        "anio": 2022,
+        "retorno_medio": 0.489,
+        "dinero_mesa_mmusd": 0.99,
+        "recaudo_mmusd": 6.99
+      },
+      {
+        "anio": 2023,
+        "retorno_medio": 0.11900000000000001,
+        "dinero_mesa_mmusd": 1.92,
+        "recaudo_mmusd": 11.92
+      },
+      {
+        "anio": 2024,
+        "retorno_medio": 0.153,
+        "dinero_mesa_mmusd": 3.79,
+        "recaudo_mmusd": 20.9
+      },
+      {
+        "anio": 2025,
+        "retorno_medio": 0.293,
+        "dinero_mesa_mmusd": 13.11,
+        "recaudo_mmusd": 38.97
+      }
+    ]
+  },
   "beta": {
     "n": 4,
     "nota": "menos de 20 sesiones: todavía no se estima"
