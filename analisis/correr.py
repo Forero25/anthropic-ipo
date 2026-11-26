@@ -6,7 +6,7 @@ import pandas as pd
 import yaml
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-import debut, dcf, oferta, riesgo  # noqa: E402
+import debut, dcf, estados, oferta, riesgo  # noqa: E402
 
 RAIZ = pathlib.Path(__file__).resolve().parents[1]
 DATOS, SALIDA = RAIZ / "datos", RAIZ / "resultados"
@@ -36,10 +36,17 @@ def main():
     out["factores"] = riesgo.factores(r, pd.read_parquet(ruta_f)) if ruta_f.exists() else {"nota": "sin factores descargados"}
     sup = yaml.safe_load((RAIZ / "entradas" / "supuestos.yaml").read_text())
     try:
+        base = estados.leer()
+        out["estados"] = {k: v for k, v in base.items()}
+        sup |= {k: base[k] for k in ("ventas_base", "margen_base", "caja_neta", "acciones_diluidas")}
+    except (FileNotFoundError, ValueError) as e:
+        out["estados"] = {"nota": str(e)}
+    try:
         sim = dcf.simular(sup)
         precio = out["debut"]["cierre"]
         out["dcf"] = {k: v for k, v in sim.items() if k != "valores"} | {
-            "precio_referencia": precio, "prob_valor_sobre_precio": dcf.prob_sobre(sim["valores"], precio),
+            "precio_referencia": precio, "capitalizacion_al_precio_musd": precio * sup["acciones_diluidas"],
+            "prob_valor_sobre_precio": dcf.prob_sobre(sim["valores"], precio),
             "crecimiento_implicito": dcf.inverso(sup, precio), "tornado": dcf.tornado(sup)}
     except ValueError as e:
         out["dcf"] = {"nota": str(e)}

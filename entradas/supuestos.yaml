@@ -1,15 +1,28 @@
-# Supuestos del DCF. Los valores base salen del prospecto (S-1 / 424B4) y se citan con su página;
-# los rangos [mínimo, moda, máximo] son supuestos del análisis y se discuten en el artículo.
-# Mientras haya un campo en null, el DCF no corre: no hay valoración con cifras inventadas.
+# Supuestos del DCF.
+# Las cifras base (ventas de doce meses, margen operativo actual, caja neta y acciones) NO se escriben aquí:
+# analisis/estados.py las lee del prospecto final (424B4). Aquí solo van los supuestos del análisis,
+# cada uno con su razón, en rangos [mínimo, moda, máximo]. Cambiar un supuesto cambia el resultado,
+# y el análisis de sensibilidad muestra cuánto.
 anios: 10
-ventas_base: null          # ingresos de los últimos doce meses, USD millones (S-1, estados financieros)
-margen_base: null          # margen operativo de los últimos doce meses (S-1)
-tasa_impuesto: 0.21        # tasa federal de EE. UU.; tasa marginal de largo plazo
-caja_neta: null            # caja e inversiones menos deuda, después de la oferta, USD millones (424B4, capitalización)
-acciones_diluidas: null    # millones de acciones después de la oferta, todas las clases (424B4)
-crecimiento_terminal: 0.03
-roic_terminal: 0.15
-crecimiento_inicial: null  # [mín, moda, máx]
-margen_objetivo: null      # [mín, moda, máx]
-ventas_a_capital: null     # [mín, moda, máx]
-wacc: null                 # [mín, moda, máx]
+tasa_impuesto: 0.21        # tasa federal de EE. UU.
+crecimiento_terminal: 0.03 # crecimiento nominal de largo plazo, cercano al del PIB nominal mundial
+roic_terminal: 0.15        # retorno sobre el capital en la madurez; fija cuánto se reinvierte para crecer al 3 %
+
+# Crecimiento de las ventas el primer año sobre las de los últimos doce meses.
+# Mínimo: las ventas se quedan en el nivel del último trimestre (×4), lo que ya da +92 %.
+# Moda: el crecimiento trimestral se frena con fuerza. Máximo: sigue alto un año más.
+crecimiento_inicial: [0.9, 1.6, 2.6]
+
+# Qué parte del exceso de crecimiento sobre el 3 % se conserva de un año al siguiente.
+# Con 0,5 y un primer año de +160 %, el segundo año crece +82 %, el tercero +42 % y el quinto +13 %.
+persistencia_crecimiento: [0.35, 0.5, 0.7]
+
+# Margen operativo en el año 10. Las empresas de software maduras rondan 25 a 35 %;
+# el costo de cómputo de los modelos de lenguaje lo puede dejar más abajo.
+margen_objetivo: [0.15, 0.30, 0.40]
+
+# Dólares de ventas nuevas por cada dólar invertido (cómputo, centros de datos, talento).
+ventas_a_capital: [0.8, 1.5, 2.5]
+
+# Costo de capital: tasa libre de riesgo más prima por una beta alta y una empresa de un solo producto.
+wacc: [0.08, 0.10, 0.12]

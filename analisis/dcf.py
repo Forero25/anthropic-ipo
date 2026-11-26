@@ -1,7 +1,9 @@
 """Valoración por flujo de caja descontado con simulación de Monte Carlo, y DCF inverso.
 
 Estructura (Damodaran, "Investment Valuation", cap. 12 y 23):
-- las ventas crecen a g_1 el primer año y convergen linealmente a g_terminal en el año T;
+- las ventas crecen a g_1 el primer año y el exceso sobre g_terminal se reduce cada año por un factor
+  de persistencia: g_t = g_terminal + (g_1 − g_terminal) · persistencia^(t−1). Con hipercrecimiento, una
+  convergencia lineal en diez años daría décadas de crecimiento irreal;
 - el margen operativo pasa del actual al objetivo de forma lineal;
 - la reinversión de cada año es el aumento de ventas dividido por la razón ventas/capital
   (cuánta venta nueva genera cada dólar invertido en cómputo, centros de datos y talento);
@@ -14,14 +16,15 @@ valores por acción, no un precio objetivo: no es una recomendación de inversi�
 import numpy as np
 from scipy.optimize import brentq
 
-INCIERTOS = ("crecimiento_inicial", "margen_objetivo", "ventas_a_capital", "wacc")
+INCIERTOS = ("crecimiento_inicial", "persistencia_crecimiento", "margen_objetivo", "ventas_a_capital", "wacc")
 
 
-def _flujos(s: dict, g1, m_obj, vac, wacc):
+def _flujos(s: dict, g1, pers, m_obj, vac, wacc):
     T = s["anios"]
     t = np.arange(1, T + 1)
-    g1, m_obj, vac, wacc = (np.atleast_1d(np.asarray(x, float)) for x in (g1, m_obj, vac, wacc))
-    g = g1[:, None] + (s["crecimiento_terminal"] - g1)[:, None] * (t - 1) / (T - 1)
+    g1, pers, m_obj, vac, wacc = (np.atleast_1d(np.asarray(x, float)) for x in (g1, pers, m_obj, vac, wacc))
+    gT = s["crecimiento_terminal"]
+    g = gT + (g1 - gT)[:, None] * pers[:, None] ** (t - 1)
     ventas = s["ventas_base"] * np.cumprod(1 + g, axis=1)
     margen = s["margen_base"] + (m_obj - s["margen_base"])[:, None] * t / T
     nopat = ventas * margen * np.where(margen > 0, 1 - s["tasa_impuesto"], 1)  # sin impuesto mientras hay pérdidas
@@ -47,7 +50,7 @@ def simular(s: dict, n=50_000, semilla=2026) -> dict:
     validar(s)
     rng = np.random.default_rng(semilla)
     draws = {k: rng.triangular(*s[k], n) for k in INCIERTOS}
-    v, peso_vt = _flujos(s, draws["crecimiento_inicial"], draws["margen_objetivo"], draws["ventas_a_capital"], draws["wacc"])
+    v, peso_vt = _flujos(s, *(draws[k] for k in INCIERTOS))
     q = np.percentile(v, [5, 25, 50, 75, 95])
     return {"n": n, "percentiles": dict(zip(["p5", "p25", "p50", "p75", "p95"], map(float, q))),
             "media": float(v.mean()), "peso_valor_terminal_mediano": float(np.median(peso_vt)), "valores": v}
@@ -63,10 +66,10 @@ def moda(s: dict) -> dict:
 
 def valor(s: dict, d: dict) -> float:
     """Valor por acción con los supuestos inciertos fijados en d (claves de INCIERTOS)."""
-    return float(_flujos(s, d["crecimiento_inicial"], d["margen_objetivo"], d["ventas_a_capital"], d["wacc"])[0][0])
+    return float(_flujos(s, *(d[k] for k in INCIERTOS))[0][0])
 
 
-def inverso(s: dict, precio: float, lo=-0.5, hi=3.0) -> float | None:
+def inverso(s: dict, precio: float, lo=-0.5, hi=6.0) -> float | None:
     """Crecimiento del primer año que hace que el DCF (resto de supuestos en su moda) iguale el precio de mercado."""
     validar(s)
     m = moda(s)

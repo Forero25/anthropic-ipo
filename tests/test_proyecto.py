@@ -79,7 +79,7 @@ def test_vol_realizada_recupera_sigma():
 
 SUP = {"anios": 10, "ventas_base": 10_000.0, "margen_base": -0.2, "tasa_impuesto": 0.21, "caja_neta": 50_000.0,
        "acciones_diluidas": 1_000.0, "crecimiento_terminal": 0.03, "roic_terminal": 0.15,
-       "crecimiento_inicial": [0.3, 0.6, 1.0], "margen_objetivo": [0.15, 0.25, 0.35],
+       "crecimiento_inicial": [0.3, 0.6, 1.0], "persistencia_crecimiento": [0.4, 0.6, 0.8], "margen_objetivo": [0.15, 0.25, 0.35],
        "ventas_a_capital": [0.8, 1.2, 1.8], "wacc": [0.09, 0.11, 0.13]}
 
 
@@ -111,3 +111,24 @@ def test_acumular_sin_duplicados(tmp_path):
     nuevo = pd.DataFrame({"hora": h[1:].append(pd.DatetimeIndex([h[-1] + pd.Timedelta(minutes=1)])), "ticker": "ANT", "close": [2.5, 3.0, 4.0]})
     t = precios.acumular(nuevo, ruta)
     assert len(t) == 4 and t.loc[t["hora"] == h[1], "close"].item() == 2.5
+
+
+def test_crecimiento_converge_geometricamente():
+    """Con persistencia 0,5 el exceso de crecimiento sobre el terminal se reduce a la mitad cada año."""
+    s = {**SUP, "anios": 4, "crecimiento_terminal": 0.03}
+    m = dcf.moda(s)
+    v1 = dcf.valor(s, {**m, "persistencia_crecimiento": 0.5})
+    v2 = dcf.valor(s, {**m, "persistencia_crecimiento": 0.7})
+    assert v2 > v1  # más persistencia del crecimiento, más valor
+
+
+def test_estados_lee_trimestres_y_capitalizacion(tmp_path):
+    import estados
+    (tmp_path / "resultados_operacion.txt").write_text(
+        "Revenue $ 10 $ 20 $ 30 $ 40 $ 50 $ 60 $ 70 Operating expenses: x Operating income (loss) (5) (4) (3) (2) (1) 2 (1) Interest")
+    (tmp_path / "capitalizacion.txt").write_text(
+        "Cash, cash equivalents, and short-term investments $ 100 $ 100 $ 300 Convertible notes payable $ 90 $ 80 $ 80 "
+        "Class A ... 1,000,000 shares issued and outstanding, pro forma as adjusted — Class N ... 500,000 shares outstanding, pro forma as adjusted (1)")
+    e = estados.leer(tmp_path)
+    assert e["ventas_base"] == 220 and e["margen_base"] == pytest.approx(-2 / 220)
+    assert e["caja_neta"] == 220 and e["acciones_diluidas"] == pytest.approx(1.500002)
