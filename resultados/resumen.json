@@ -36,10 +36,10 @@
   "recorrido": {
     "primer_minuto": "11:48",
     "minutos_con_operaciones": 252,
-    "hora_maximo": "11:50",
+    "hora_maximo": "11:49",
     "hora_minimo": "13:18",
-    "vwap": 97.39058975823546,
-    "vwap_vs_oferta": 0.17338059949681273,
+    "vwap": 97.49008871065408,
+    "vwap_vs_oferta": 0.17457938205607326,
     "share_minutos_bajo_apertura": 0.9920634920634921,
     "serie_vs_oferta": [
       {
@@ -64,7 +64,7 @@
       },
       {
         "hora": "12:13",
-        "r": 0.20108
+        "r": 0.20102
       },
       {
         "hora": "12:18",
@@ -251,17 +251,17 @@
   "vol_realizada": [
     {
       "fecha": "2026-11-19",
-      "vol_anualizada": 5.071537612474615,
+      "vol_anualizada": 5.072816161819212,
       "n_retornos": 51
     },
     {
       "fecha": "2026-11-20",
-      "vol_anualizada": 1.2764206385213839,
+      "vol_anualizada": 1.276657404168978,
       "n_retornos": 77
     },
     {
       "fecha": "2026-11-23",
-      "vol_anualizada": 1.298841933094528,
+      "vol_anualizada": 1.302198764419848,
       "n_retornos": 77
     },
     {
@@ -271,7 +271,7 @@
     },
     {
       "fecha": "2026-11-25",
-      "vol_anualizada": 1.1630590077286782,
+      "vol_anualizada": 1.1630064003240534,
       "n_retornos": 77
     }
   ],
