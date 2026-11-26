@@ -18,7 +18,10 @@ def main():
     subprocess.run(["pdftotext", "-layout", str(carpeta / "ipo_statistics.pdf"), str(carpeta / "ipo_statistics.txt")], check=True)
     texto = (carpeta / "ipo_statistics.txt").read_text(errors="ignore")
     if "--explorar" in sys.argv:
-        print(texto[:9000])
+        for titulo in ("Table 1: Mean First-day Returns", "Table 11: Mean and Median Gross Spreads"):
+            pos = [i for i in range(len(texto)) if texto.startswith(titulo, i)]
+            i = pos[1] if len(pos) > 1 else (pos[0] if pos else 0)
+            print("=" * 20, titulo, "\n", texto[i:i + 7000])
 
 
 if __name__ == "__main__":
